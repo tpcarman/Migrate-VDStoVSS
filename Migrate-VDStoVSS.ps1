@@ -1,4 +1,5 @@
-﻿#Requires -Modules VMware.VimAutomation.Core, VMware.VimAutomation.Vds
+﻿function Migrate-VDStoVSS{
+ #Requires -Modules VMware.VimAutomation.Core, VMware.VimAutomation.Vds
 
 <#
 .SYNOPSIS  
@@ -22,9 +23,6 @@
     Specifies the name of the standard virtual switch
     This parameter is manadatory and does not have a default value.
 #>
-
-
-function Migrate-VDStoVSS{
 
 [CmdletBinding()]
 Param(  
