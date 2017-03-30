@@ -1,2 +1,2 @@
-# Migrate-VDStoVSS
-Migrate an ESXi host from a Distributed Virtual Switch to a Standard Virtual Switch
+# vCenter Migration
+PowerCLI scripts to assist with VMware vCenter Server migrations
