@@ -11,6 +11,8 @@
     Author:         Tim Carman
     Twitter:        @tpcarman
     Github:         tpcarman
+    
+    Credits:	    William Lam (@lamw) - Creator of original script from which this script was developed
 .LINK
     https://github.com/tpcarman/vCenter-Migration
 .PARAMETER VMHost
