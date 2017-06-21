@@ -12,7 +12,7 @@
     Twitter:        @tpcarman
     Github:         tpcarman
 .LINK
-    https://github.com/tpcarman/PowerCLI-Scripts
+    https://github.com/tpcarman/vCenter-Migration
 .PARAMETER VMHost
     Specifies the name of the ESXi host
     This parameter is manadatory and does not have a default value.
@@ -22,6 +22,8 @@
 .PARAMETER VSS_Name
     Specifies the name of the standard virtual switch
     This parameter is manadatory and does not have a default value.
+.EXAMPLE
+    Migrate-VDStoVSS -VMHost esx1.domain.corp -DVS_Name dvSwitch0 -VSS_Name vSwitchMigrate
 #>
 
 [CmdletBinding()]
