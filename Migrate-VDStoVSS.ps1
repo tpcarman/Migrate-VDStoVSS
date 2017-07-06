@@ -78,7 +78,7 @@ foreach($uplink in $uplink_array){
 $vss = $objVMHost | Get-VirtualSwitch -Name $VSS_Name
 
 # Create destination portgroups
-$dvspgs = Get-VDPortgroup | where{$_.IsUplink -eq $False}
+$dvspgs = Get-VDPortgroup -VDSwitch $VDS_Name | where{$_.IsUplink -eq $False}
 foreach($dvspg in $dvspgs){
     $pgName = $dvspg.name
     $pgvlan = $dvspg.vlanConfiguration.vlanid  
