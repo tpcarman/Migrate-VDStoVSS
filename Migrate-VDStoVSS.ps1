@@ -64,7 +64,7 @@ else{
 }
 
 # Array of pNICs to migrate to VSS
-Write-host "Retrieving uplink information from $DVS_Name"
+Write-host "Retrieving uplink information from $VDS_Name"
 $esxcli = Get-EsxCli -VMHost $VMHost
 $uplink_array = $esxcli.network.vswitch.dvs.vmware.list($vds.Name) | select -ExpandProperty Uplinks
 $pnic_array = @()
