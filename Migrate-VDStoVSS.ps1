@@ -25,7 +25,7 @@
     Specifies the name of the standard virtual switch
     This parameter is manadatory and does not have a default value.
 .EXAMPLE
-    Migrate-VDStoVSS -VMHost esx1.domain.corp -DVS_Name dvSwitch0 -VSS_Name vSwitchMigrate
+    Migrate-VDStoVSS -VMHost esx1.domain.corp -VDS_Name dvSwitch0 -VSS_Name vSwitchMigrate
 #>
 
 [CmdletBinding()]
