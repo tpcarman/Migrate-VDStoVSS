@@ -18,7 +18,7 @@
 .PARAMETER VMHost
     Specifies the name of the ESXi host
     This parameter is manadatory and does not have a default value.
-.PARAMETER DVS_Name
+.PARAMETER VDS_Name
     Specifies the name of the distributed virtual switch
     This parameter is manadatory and does not have a default value.	
 .PARAMETER VSS_Name
@@ -36,7 +36,7 @@ Param(
            
     [Parameter(Mandatory=$True,HelpMessage='Specify the name of the distributed virtual switch')]
     [ValidateNotNullOrEmpty()]
-    [String]$DVS_Name='',
+    [String]$VDS_Name='',
 
     [Parameter(Mandatory=$True,HelpMessage='Specify the name of the standard virtual switch')]
     [ValidateNotNullOrEmpty()]
@@ -46,7 +46,7 @@ Param(
 $objVMHost = Get-VMHost -Name $VMHost
 
 # VDS to migrate from
-$vds = Get-VDSwitch -Name $vds_name -VMHost $VMHost
+$vds = Get-VDSwitch -Name $VDS_Name -VMHost $VMHost
  
 # Name of portgroups to create on VSS
 $mgmt_name = (Get-VMHostNetworkAdapter -VMHost $VMHost -VMKernel | where{$_.ManagementTrafficEnabled -eq $true}).PortGroupName
